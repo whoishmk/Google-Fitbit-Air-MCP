@@ -1,0 +1,22 @@
+[project]
+name = "fitbit-mcp"
+version = "0.1.0"
+description = "Read-only MCP server for Fitbit data via the Google Health API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp",
+    "google-auth",
+    "google-auth-oauthlib",
+    "requests",
+]
+
+[project.scripts]
+fitbit-mcp = "fitbit_mcp.server:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
